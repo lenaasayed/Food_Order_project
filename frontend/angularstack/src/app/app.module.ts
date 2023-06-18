@@ -15,6 +15,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProviderModule } from './provider/provider.module';
+import { HeaderComponent } from './components/partials/header/header.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ProviderModule } from './provider/provider.module';
     PortfolioComponent,
     NavComponent,
     FooterComponent,
+    HeaderComponent,
 
   ],
   imports: [

@@ -1,0 +1,39 @@
+import { Schema} from "mongoose";
+import { model } from "mongoose";
+
+export interface Food
+{
+id:string;
+name:string;
+price:number;
+tags:string[];
+favorite:boolean;
+stars:number;
+imageUrl:string;
+origins:string[];
+cookTime:string;
+
+}
+
+export const FoodSchema = new Schema<Food>({
+    name:{type:String,required:true},
+    price:{type:Number,required:true},
+    tags:[String],
+    favorite:{type:Boolean,default:true},
+    stars:{type:Number,required:true},
+    imageUrl:{type:String,required:true},
+    origins:[String],
+    cookTime:{type:String,required:true}
+
+},{
+    toJSON:{
+        virtuals:true
+    },
+    toObject:{
+        virtuals:true
+    },
+    timestamps:true
+}
+);
+
+export const FoodModel = model<Food>('food',FoodSchema);

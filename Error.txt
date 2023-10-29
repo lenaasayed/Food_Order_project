@@ -71,3 +71,11 @@ ng g module 'user' --module=app
 
 To check that mongo shell work
 open "services" from start menu in windows and search for "MongoDB" and start it
+
+npm install typescript@4.4.2
+
+
+unable to compile typescript:
+Typescript: TS7006: Parameter 'xxx' implicitly has an 'any' type
+add in tsconfig : "noImplicitAny": false
+

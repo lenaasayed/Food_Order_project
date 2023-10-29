@@ -33,13 +33,11 @@ export class CartService {
     cartItem.quantity = quantity;
     cartItem.price = quantity * cartItem.food.price;
     this.setCartToLocalStorage();
-
   }
 
   clearCart(){
     this.cart = new Cart();
     this.setCartToLocalStorage();
-
   }
 
   getCartObservable():Observable<Cart>{

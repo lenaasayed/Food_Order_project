@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
 
   cartQuantity=0;
   user!:User;
-  constructor(cartService:CartService,private userService:UserService) {
+  constructor(private cartService:CartService,private userService:UserService) {
     cartService.getCartObservable().subscribe((newCart)=>{
       this.cartQuantity = newCart.totalCount;
     })
@@ -26,12 +26,12 @@ export class HeaderComponent implements OnInit {
   }
 
   logout(){
+    // this.cartQuantity=0;
+    this.cartService.clearCart();
     this.userService.logout();
   }
 
   get isAuth(){
-    // console.log("ppppppppppppppppppppppppp")
-    // console.log(this.user)
     return this.user.token;
   }
 }

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "cd src && node server.ts",
+    "start": "cd src && nodemon server.ts",
     "dev": "cd src && nodemon server.ts"
   },
   "dependencies": {

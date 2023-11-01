@@ -2,9 +2,8 @@
   "name": "backend",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
   "scripts": {
-    "start": "cd src && ts-node server.ts"  },
+    "start": "cd src && node server.ts"  },
   "dependencies": {
     "@popperjs/core": "^2.11.6",
     "bcryptjs": "^2.4.3",

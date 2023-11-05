@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "scripts": {
       "dev": "cd frontend/angularstack && npm start & cd backend && npm start",
-      "start": "cd backend/built && node server.js",
+      "start": "cd backend/built && nodemon server.js",
       "prebuild": "cd backend && npm start",
       "build": "cd frontend/angularstack && npm start"
     }

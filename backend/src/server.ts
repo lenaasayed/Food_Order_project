@@ -3,20 +3,20 @@ import dotenv from 'dotenv'
 
 dotenv.config();
 
-const { express } = require('express');
-const { cors } = require('cors');
-const { foodRouter } = require('./router/food.router');
-const { userRouter } = require('./router/user.router');
-const { dbConnect } = require('./configs/database.config');
-const { orderRouter } = require('./router/order.router');
+// const { express } = require('express');
+// const { cors } = require('cors');
+// const { foodRouter } = require('./router/food.router');
+// const { userRouter } = require('./router/user.router');
+// const { dbConnect } = require('./configs/database.config');
+// const { orderRouter } = require('./router/order.router');
 
-// import express from "express";
-// import cors from "cors";
-// import foodRouter from './router/food.router';
-// import userRouter from "./router/user.router";
+import express from "express";
+import cors from "cors";
+import foodRouter from './router/food.router';
+import userRouter from "./router/user.router";
 
-// import { dbConnect } from './configs/database.config';
-// import orderRouter from './router/order.router';
+import { dbConnect } from './configs/database.config';
+import orderRouter from './router/order.router';
 
 dbConnect();
 const app = express();
